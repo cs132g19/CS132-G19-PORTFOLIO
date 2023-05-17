@@ -33,16 +33,16 @@
 					<header>
 						<h1 style="font-family: Trebuchet MS"><strong>Data Preprocessing</strong></h1>
 					</header>
-								<h3 style="font-family: Courier New">Cleaning the dataset</h3>
+								<h3 style="font-family: Courier New">Cleaning the Dataset</h3>
 									<p style="font-family: Courier New" align="justify">Before we started making visual charts and graphs to observe patterns and trends, we started to clean the data first. Cleaning the data is necessary in order to maximize our productivity and provide better quality information. This way, we can easily visualize without having to worry about missing or incorrect data.</p>
-									<p style="font-family: Trebuchet MS; margin-top: -10px">Removing non-essential columns</p>
+									<p style="font-family: Trebuchet MS; margin-top: -10px">Removing Non-essential Columns</p>
 									<p style="font-family: Courier New" align="justify">We removed non-essential columns to our time-series analysis, such as <b>ID, Timestamp, Group, Collector, Topic, Category, Remarks</b> and <b>Remarks</b>. These fields were not necessary and were thus dropped. We left the other columns in our dataset since we wanted to observe if they may influence the distribution of our data.</p>
-									<p style="font-family: Trebuchet MS; margin-top: -10px">Missing values and encoding values</p>
+									<p style="font-family: Trebuchet MS; margin-top: -10px">Missing Values and Encoding Values</p>
 									<p style="font-family: Courier New" align="justify">Our dataset has missing values in the <b>Location</b> and <b>Account Bio</b> columns. We filled this in by encoding <b>1</b> for if there was a location or an account bio and <b>0</b> if the field was empty. We also encoded other fields as well to make it more convenient for us to manipulate in our code.</p>
 									<p style="font-family: Courier New" align="justify">We split the <b>Tweet Type</b> column based on the unique variables contained within (<i>URL, Reply, Image, Video</i>). We left <i>Text</i> out since every sample is of that type. After separating it into other columns, we then encoded it so that the columns' values would be <b>1</b> if it was of that type and <b>0</b> if not. A similar process was done to the <b>Content Type</b> column, which split into the <i>Rational, Emotional</i> and <i>Transactional</i> columns.</p>
-									<p style="font-family: Trebuchet MS; margin-top: -10px">Handling outliers</p>
+									<p style="font-family: Trebuchet MS; margin-top: -10px">Handling Outliers</p>
 									<p style="font-family: Courier New" align="justify">We retained the outliers in our data in order to view the scope of the range of our samples. Furthermore, removing such samples would lessen the number of tweets we have for analysis.</p>
-									<p style="font-family: Trebuchet MS; margin-top: -10px">Format consistency</p>
+									<p style="font-family: Trebuchet MS; margin-top: -10px">Format Consistency</p>
 									<p style="font-family: Courier New" align="justify">We manually corrected and re-edited the values in our fields to clean it up more, such as correcting typos, removing whitespace to avoid repetition of unique values (the dataset recognizes "Identified" and "Identified " as two separate values, for instance), and edited the formatting of the dates and times in the dataset for easier access if we needed to manipulate them.</p>
 
 				</div>
@@ -53,9 +53,11 @@
 					<header>
 						<h1 style="font-family: Trebuchet MS"><strong>Visualization</strong></h1>
 					</header>
-								<h3 style="font-family: Courier New">Elaine Lopez</h3>
-									<p style="font-family: Trebuchet MS; margin-top: -10px">-WFX-</p>
-									<p style="font-family: Courier New; margin-top: -20px">Heya! I'm Elaine Lopez, a second year BS Computer Science student at the University of the Philippines, Diliman. I enjoy the challenge of the problem solving aspects involved in CS since it feels incredibly satisfying to tackle a problem that seems complicated at first glance. Through this project, I aim to be able to further hone and practice my skills and to be able to apply what I've learned.</p>
+								<h3 style="font-family: Courier New">Feature Distribution</h3>
+									<p style="font-family: Trebuchet MS; margin-top: -10px">Numerical Features</p>
+									<p style="font-family: Courier New" align="justify">We used <b>Seaborn</b> to observe the distribution of our numerical features (<i>Following, Followers, Likes, Replies, Retweets, Days Since First Case (21/01/20)</i>) via scatterplots and histograms.</p>
+									<img src="images/scatterhist.png" alt="" />
+									<p style="font-family: Courier New" align="justify">We observed that most of our samples occur in the <b>0-200</b> and <b>400-600</b> range of Days Since First Case. This observation, in particular, can be observed via the bottom rightmost histogram.</p>
 				</div>
 			</article>
 
