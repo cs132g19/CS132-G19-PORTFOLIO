@@ -41,7 +41,10 @@
 									<p style="font-family: Courier New" align="justify">Our dataset has missing values in the <b>Location</b> and <b>Account Bio</b> columns. We filled this in by encoding <b>1</b> for if there was a location or an account bio and <b>0</b> if the field was empty. We also encoded other fields as well to make it more convenient for us to manipulate in our code.</p>
 									<p style="font-family: Courier New" align="justify">We split the <b>Tweet Type</b> column based on the unique variables contained within (<i>URL, Reply, Image, Video</i>). We left <i>Text</i> out since every sample is of that type. After separating it into other columns, we then encoded it so that the columns' values would be <b>1</b> if it was of that type and <b>0</b> if not. A similar process was done to the <b>Content Type</b> column, which split into the <i>Rational, Emotional</i> and <i>Transactional</i> columns.</p>
 									<p style="font-family: Trebuchet MS; margin-top: -10px">Handling Outliers</p>
-									<p style="font-family: Courier New" align="justify">We retained the outliers in our data in order to view the scope of the range of our samples. Furthermore, removing such samples would lessen the number of tweets we have for analysis.</p>
+									<p style="font-family: Courier New" align="justify">We needed to check for outliers to make sure that our data would not be skewed. By getting the standard deviation and z-scores of our data, we observed that we had a few outliers, particularly in the engagement metrics (<i>likes, retweets, replies</i>).</p>
+									<img src="images/box1.png" align="center" />
+									<p style="font-family: Courier New; margin-top: 20px" align="justify">They are few in number, but may skew our data greatly, so we dropped these values.</p>
+									<img src="images/box2.png" align="center" />
 									<p style="font-family: Trebuchet MS; margin-top: -10px">Format Consistency</p>
 									<p style="font-family: Courier New" align="justify">We manually corrected and re-edited the values in our fields to clean it up more, such as correcting typos, removing whitespace to avoid repetition of unique values (the dataset recognizes "Identified" and "Identified " as two separate values, for instance), and edited the formatting of the dates and times in the dataset for easier access if we needed to manipulate them.</p>
 
@@ -73,7 +76,7 @@
 								<h3 style="font-family: Courier New; margin-top: -10px">Time Series</h3>
 									<p style="font-family: Courier New" align="justify">We return to using <b>Seaborn</b> to create a line plot to observe the trends from a time-series analysis perspective.</p>
 									<img src="images/lineplot.png" align="center" />
-									<p style="font-family: Courier New; margin-top: 20px" align="justify">It can be observed that the highest number of engagements (<i>likes, replies, retweets</i>) occurred at around the <b>400</b> day mark.</p>
+									<p style="font-family: Courier New; margin-top: 20px" align="justify">It can be observed that there are <b>3</b>obvious peaks, specifically <b>2</b> between the <b>0-200</b> range and <b>1</b> between the <b>400-500</b> range.</p>
 									<img src="images/lineplot2.png" align="center" />
 									<p style="font-family: Courier New; margin-top: 20px" align="justify">We can see that more tweets occurred in the early stages of the pandemic, specifically between <b>January 2020</b> and <b>May 2020</b>, with a few smaller peaks here and there after.</p>
 				</div>
