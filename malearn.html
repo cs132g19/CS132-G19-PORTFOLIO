@@ -53,32 +53,19 @@
 					<header>
 						<h1 style="font-family: Trebuchet MS"><strong>Machine Learning Model</strong></h1>
 					</header>
-								<h3 style="font-family: Courier New">Feature Distribution</h3>
-									<p style="font-family: Trebuchet MS">Numerical Features</p>
-									<p style="font-family: Courier New" align="justify">We used <b>Seaborn</b> to observe the distribution of our numerical features (<i>Following, Followers, Likes, Replies, Retweets, Days Since First Case (21/01/20)</i>) via scatterplots and histograms.</p>
-									<img src="images/scatterhist.png" width="800" height="800" align="center" />
-									<p style="font-family: Courier New; margin-top: 20px" align="justify">We observed that most of our samples occur in the <b>0-200</b> and <b>400-600</b> range of Days Since First Case. This observation, in particular, can be observed via the bottom rightmost histogram.</p>
-									<p style="font-family: Courier New" align="justify">We also observed that engagement is mostly low or 0 (from likes and replies) but we see a <b>general downward trend</b> with retweets.</p>
-									<p style="font-family: Trebuchet MS; margin-top: -10px">Numerical Feature Correlation</p>
-									<p style="font-family: Courier New" align="justify">Again, we used <b>Seaborn</b>, this time to plot a heat map and observe the correlation of the numerical features with each other.</p>
-									<img src="images/heatmap.png" align="center" />
-									<p style="font-family: Courier New; margin-top: 20px" align="justify">As expected, there is a <b>positive correlation</b> between the number of followers and engagements (likes, replies, and retweets). Furthermore, there is also a <b>positive correlation</b> between the engagement metrics. The number of following accounts has not much correlation to other values. The same is observed with the days since first case.</p>
-									<p style="font-family: Trebuchet MS; margin-top: -10px">Group Comparison</p>
-									<p style="font-family: Courier New" align="justify">This time, we used <b>Matplotlib</b> to plot bar and swarm plots to compare and contrast the different fields.</p>
-									<img src="images/bar1.png" align="center" />
-									<p style="font-family: Courier New; margin-top: 20px" align="justify">We can observe that there are more <b>anonymous</b> accounts than identified accounts.</p>
-									<img src="images/bar2.png" align="center" width="700" height="400"/>
-									<img src="images/swarm.png" align="center" width="550" height="400"/>
-									<p style="font-family: Courier New; margin-top: 20px" align="justify">We can observe that there are more followers for <b>identified</b> and <b>media</b> accounts than anonymous accounts. Through the swarm plot, we can also observe that the media accounts have <b>more followers</b> compared to anonymous and identified accounts. There is also a similar pattern for the anonymous and identified types in they both have more accounts with followers in the <b>100-1000</b> range. These were done in a logarithmic scale to minimize the size of the graph while still keeping it accurate.</p>
-								<h3 style="font-family: Courier New; margin-top: -10px">Time Series</h3>
-									<p style="font-family: Courier New" align="justify">We return to using <b>Seaborn</b> to create a line plot to observe the trends from a time-series analysis perspective.</p>
-									<img src="images/lineplot.png" align="center" />
-									<p style="font-family: Courier New; margin-top: 20px" align="justify">It can be observed that there are <b>3</b> obvious peaks, specifically <b>2</b> between the <b>0-200</b> range and <b>1</b> between the <b>400-500</b> range.</p>
-									<img src="images/lineplot2.png" align="center" width="800" height="400"/>
-									<p style="font-family: Courier New; margin-top: 20px" align="justify">We can see that more tweets occurred in the early stages of the pandemic, specifically between <b>January 2020</b> and <b>May 2020</b>, with a few smaller peaks here and there after.</p>
+								<h3 style="font-family: Courier New">Event Detection</h3>
+									<p style="font-family: Courier New" align="justify">Event Detection is a type of machine learning model that helps in identifying trends and events. For our study, we aim to identify events that have caused peaks in our data, specifically what causes misinformation about COVID-19 home remedies and techniques to rise.</p>				
+
+									<img src="images/ed1.png" align="center" />
+									<p style="font-family: Courier New; margin-top: 20px" align="justify">Our event detection model uses <b>tweet count</b> and <b>date</b> as variables. The dotted lines represent the change in trend, in which two occur on <b>June, 5, 2020</b> and <b>February 28, 2022</b>. The red cross symbols represent the peaks in our data. Here are the events based on the model:</p>					
+									<p style="font-family: Courier New" align="justify"><b>March 2020</b>: President Duterte imposes the first nationwide lockdown shortly after the first local transmission in the Philippines.</p>	
+									<p style="font-family: Courier New" align="justify"><b>March 2021</b>: Cases finally reach the one million mark, and the first batches of the vaccines roll in.</p>
+									<p style="font-family: Courier New" align="justify"><b>August 2021</b>: The Delta variant of COVID-19 has become the dominant coronavirus in the Philippines.</p>
+									<p style="font-family: Courier New" align="justify"><b>January 2020</b>: President Duterte imposes the first nationwide lockdown shortly after the first local transmission in the Philippines.</p>
+									<p style="font-family: Courier New" align="justify">In short, these events caused a change in the number of misinformation tweets being posted. The first dotted line shows a change in trend with the sudden drop of tweets after a few months into the pandemic, whereas the second dotted line represents the change in trend after around a year into the pandemic and when more minor events and circumstances such as vaccine drives and case counts.</p>
 
 									<p style="font-family: Trebuchet MS; margin-top: 20px">Check our code here!</p>
-						<a href="https://colab.research.google.com/drive/17AZBS3D0HK3jTsnPE6g44aK4xjN0mA1w?usp=sharing" class="button large scrolly">Data Exploration Code</a>
+						<a href="https://colab.research.google.com/drive/17AZBS3D0HK3jTsnPE6g44aK4xjN0mA1w#scrollTo=8SFrfnhpo3e3" class="button large scrolly">Data Exploration Code</a>
 				</div>
 			</article>
 
